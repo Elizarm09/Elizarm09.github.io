@@ -11,24 +11,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let audioContext, analyser, source, dataArray, bufferLength;
 
-    // Definir la ruta base correcta
+    // Define the correct base
     const basePath = "audio/categoria/";
 
-    // Configurar rutas de canciones
-        const songs = {
-            Clásica: [
-                { name: '♬ Clásica ♬', file: 'Clásica.mp3' },
-            ],
-            Jazz: [
-                { name: '♬ Jazz ♬', file: 'Jazz.mp3' },
-            ],
-            Pop: [
-                { name: '♬ Pop♬', file: 'Pop.mp3' },
-            ],
-            Trap: [
-                { name: '♬ Trap ♬', file: 'Trap.mp3' }
-            ]
-        };  
+    // Set up song path
+    const songs = {
+        Clásica: [
+            { name: '♬ Clásica ♬', file: 'Clásica.mp3' },
+        ],
+        Jazz: [
+            { name: '♬ Jazz ♬', file: 'Jazz.mp3' },
+        ],
+        Pop: [
+            { name: '♬ Pop♬', file: 'Pop.mp3' },
+        ],
+        Trap: [
+            { name: '♬ Trap ♬', file: 'Trap.mp3' }
+        ]
+    };  
     categorySelect.addEventListener("change", (e) => {
         document.body.style.backgroundColor = e.target.options[e.target.selectedIndex].dataset.color;
         songSelect.innerHTML = "<option selected disabled>Elija una canción</option>";

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Map</title>
+    <link rel="icon" type="Logo.jpeg" href="Imagen/Logo.jpeg"> <!-- Favicon agregado -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <img src="Imagen/Logo.jpeg" alt="Logo">
+        <h1>Melody Map</h1>
+        <nav>
+            <ul>
+                <li><a href="https://open.spotify.com" target="_blank"><i class="fab fa-spotify"></i> Spotify</a></li>
+                <li><a href="https://music.youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube Music</a></li>
+                <li><a href="https://music.google.com" target="_blank"><i class="fab fa-google"></i> Google Music</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="playlist">
+            <label for="categorySelect">Seleccione Categoría:</label>
+            <select id="categorySelect">
+                <option value="" selected disabled>Elija una categoría</option>
+                <option value="Clásica" data-color="#FFC0CB">Clásica</option>
+                <option value="Jazz" data-color="#FFD700">Electrónica</option>
+                <option value="Pop" data-color="#808080">Pop</option>
+                <option value="Trap" data-color="#FF4500">Trap</option>            
+            </select>
+            
+            <label for="songSelect">Seleccione Canción:</label>
+            <select id="songSelect" disabled>
+                <option value="" selected disabled>Elija una canción</option>
+            </select>
+            
+            <h3 id="songTitle">Siente el ritmo!</h3>
+
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <div id="playerControls">
+                <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+                <button id="stopBtn"><i class="fas fa-stop"></i></button>
+                <button id="downloadBtn"><i class="fas fa-download"></i></button>
+            </div>
+            <canvas id="canvas"></canvas>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
